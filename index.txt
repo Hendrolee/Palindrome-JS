@@ -1,0 +1,21 @@
+// reverse()
+// gsub() - compare strings, ignoring other elements i.e. ('!', ',', ':')
+
+const word = 'Are we not pure? “No sir!” Panama’s moody Noriega brags. “It is garbage!” Irony dooms a man; a prisoner up to new era.'
+// wordArray.replace(/ /g, '')
+const joinWord = (arrayOfWord) => {
+  return arrayOfWord.join('').toUpperCase()
+}
+
+const palindrome = () => {
+  const wordArray = word.split('').reverse()
+  const wordJoin = joinWord(wordArray)
+
+  // console.log(word.replace(/[^a-zA-Z ]|\s/g, '').toUpperCase())
+  // console.log(wordJoin.replace(/[^a-zA-Z ]|\s/g, ''))
+
+  word.replace(/[^a-zA-Z ]|\s/g, '').toUpperCase() === wordJoin.replace(/[^a-zA-Z ]|\s/g, '') ?
+    console.log('T') : console.log('F')
+}
+palindrome()
+
